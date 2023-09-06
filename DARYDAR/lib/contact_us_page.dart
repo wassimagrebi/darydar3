@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:DARYDAR/menu_page.dart';
 
@@ -12,11 +11,6 @@ class contact_us_page extends StatelessWidget {
           centerTitle: true,
          
           backgroundColor: Color.fromARGB(255, 246, 246, 246),
-        ),
-    
-    
-
-    
-       
+        ),    
    );
 }

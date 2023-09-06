@@ -19,6 +19,7 @@ class _services_climaState extends State<services_clima> {
       servicePrice: 75,
       serviceType: "dépannage",
       serviceNote:"entretenez votre climatiseur\npour assurer son bon\nfonctionnement",
+      quantity: 1
     ),
     Service(
       id: 2,
@@ -27,6 +28,7 @@ class _services_climaState extends State<services_clima> {
       servicePrice: 70,
       serviceType: "dépannage",
       serviceNote:"demander un technicien\npour souder votre tuyaux\nqui fuite",
+      quantity: 1
     ),
     Service(
       id: 3,
@@ -35,6 +37,7 @@ class _services_climaState extends State<services_clima> {
       servicePrice: 100,
       serviceType: "installation",
       serviceNote:"demander un technicien\npour installer votre nouveau\nclimatiseur",
+      quantity: 1
     ),
   ];
 
@@ -45,10 +48,7 @@ class _services_climaState extends State<services_clima> {
         appBar: AppBar(
           title: Text('Climatisation'),
           centerTitle: true,
-          actions: [
-            Icon(Icons.search_outlined),
-            SizedBox(width: 20.0),
-          ],
+          
           backgroundColor: Color.fromARGB(255, 246, 246, 246),
         ),
         body: Column(

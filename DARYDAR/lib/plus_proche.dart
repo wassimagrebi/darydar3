@@ -1,7 +1,5 @@
-import 'package:DARYDAR/models/category.dart';
 import 'package:DARYDAR/models/services.dart';
 import 'package:flutter/material.dart';
-import 'package:DARYDAR/home_page.dart';
 import 'package:provider/provider.dart';
 import 'package:DARYDAR/models/cart.dart';
 

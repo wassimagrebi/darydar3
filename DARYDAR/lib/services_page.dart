@@ -15,10 +15,7 @@ class services_page extends StatelessWidget {
     appBar: AppBar(
       title: Text('Nos Services'),
        centerTitle: true,
-        actions: [
-          Icon(Icons.search_outlined),
-          SizedBox(width: 20.0),
-        ],
+        
       backgroundColor: Color.fromARGB(255, 246, 246, 246),
     ),
     backgroundColor: Color.fromARGB(255, 246, 246, 246),

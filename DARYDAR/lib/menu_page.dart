@@ -1,10 +1,10 @@
 import 'package:DARYDAR/about_us.dart';
 import 'package:DARYDAR/contact_us_page.dart';
-import 'package:DARYDAR/profile_page.dart';
-import 'package:DARYDAR/shopping_page.dart';
+import 'package:DARYDAR/services_chauff.dart';
+import 'package:DARYDAR/services_clima.dart';
+import 'package:DARYDAR/services_elect.dart';
+import 'package:DARYDAR/services_plomb.dart';
 import 'package:flutter/material.dart';
-import 'package:DARYDAR/home_page.dart';
-import 'package:DARYDAR/services_page.dart';
 
 class menu_page extends StatelessWidget {
   const menu_page({super.key});
@@ -54,26 +54,62 @@ class menu extends StatelessWidget {
         padding: const EdgeInsets.all(24),
         child: Wrap(
           children: [
-            
-            ListTile(
+            ExpansionTile(
               leading: const Icon(Icons.grid_view_outlined),
               title: const Text('Services'),
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => const services_page(),
-                ));
-              },
+              children: [
+                ListTile(
+                  leading: Icon(Icons.air_outlined),
+                  title: Text('Climatisation'),
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => services_clima(),
+                    ));
+                  },
+                ),
+                ListTile(
+                  leading: Icon(Icons.water_drop_outlined),
+                  title: Text('Plomberie'),
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => services_plomb(),
+                    ));
+                  },
+                ),
+
+                ListTile(
+                  leading: Icon(Icons.bolt_outlined),
+                  title: Text('Électricité'),
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => services_elect(),
+                    ));
+                  },
+                ),
+
+                ListTile(
+                  leading: Icon(Icons.thermostat_outlined),
+                  title: Text('Chauffage'),
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => services_chauff(),
+                    ));
+                  },
+                ),
+                
+              ],
             ),
-            
-            
             ListTile(
               leading: const Icon(Icons.content_paste_go_outlined),
               title: const Text('À propos'),
               onTap: () {
                 Navigator.pop(context);
                 Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) =>  about_us_page(),
+                  builder: (context) => about_us_page(),
                 ));
               },
             ),
@@ -87,6 +123,7 @@ class menu extends StatelessWidget {
                 ));
               },
             ),
+
           ],
         ),
       );

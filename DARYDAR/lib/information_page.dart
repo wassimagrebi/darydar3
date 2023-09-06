@@ -195,6 +195,29 @@ class _informationState extends State<information> {
                       subtitle: Text(
                           "La vie est beaucoup plus belle avec les photos, merci de nous communiquer des photos qui faciliter l'intervention pour nos héros."),
                     ),
+
+
+                    SizedBox(height: 20,),
+
+
+
+                    InkWell(
+                      onTap: () {
+                        
+                      },
+
+                      child: Image.asset(
+                        "assets/add_image.png",
+                        height: 200,
+                        width: 200,
+                      ),
+                    ),
+
+
+
+
+
+
                   ],
                 ),
               ),

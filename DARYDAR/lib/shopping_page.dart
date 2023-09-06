@@ -21,12 +21,6 @@ class _shopping_pageState extends State<shopping_page> {
           appBar: AppBar(
             title: Text('Panier'),
             centerTitle: true,
-            actions: [
-              IconButton(
-                onPressed: () {},
-                icon: Icon(Icons.search_outlined),
-              ),
-            ],
             backgroundColor: Color.fromARGB(255, 246, 246, 246),
           ),
           body: cart.basketServices.length == 0
@@ -172,20 +166,26 @@ class _shopping_pageState extends State<shopping_page> {
                                                           .spaceBetween,
                                                   children: [
                                                     InkWell(
-                                                        onTap: () {},
+                                                        onTap: () {
+                                                          cart.removeCounter(cart.basketServices[index]);
+                                                        },
                                                         child: Icon(
                                                           Icons.remove,
                                                           color: Colors.white,
                                                         )),
                                                     Text(
-                                                      ' 1 ',
+                                            
+                                                      cart.basketServices[index].quantity.toString(),
+
                                                       style: TextStyle(
                                                         color: Colors.white,
                                                         fontSize: 18,
                                                       ),
                                                     ),
                                                     InkWell(
-                                                        onTap: () {},
+                                                        onTap: () {
+                                                          cart.add(cart.basketServices[index]);
+                                                        },
                                                         child: Icon(
                                                           Icons.add,
                                                           color: Colors.white,

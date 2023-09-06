@@ -1,6 +1,5 @@
 import 'package:DARYDAR/plus_proche.dart';
 import 'package:DARYDAR/menu_page.dart';
-import 'package:DARYDAR/models/category.dart';
 import 'package:DARYDAR/renovation_recente.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -16,53 +15,53 @@ class home_Page extends StatefulWidget {
 class _home_PageState extends State<home_Page> {
   List<Service> items = [
     Service(
-      id: 1,
-      image: 'assets/renovationmaison.png',
-      serviceName: 'Peinture interieur',
-      serviceNote: '',
-      servicePrice: 7,
-      serviceType: '',
-    ),
+        id: 1,
+        image: 'assets/renovationmaison.png',
+        serviceName: 'Peinture interieur',
+        serviceNote: '',
+        servicePrice: 7,
+        serviceType: '',
+        quantity: 1),
     Service(
-      id: 2,
-      image: 'assets/installationSpot.png',
-      serviceName: 'Installation Spot',
-      serviceNote: '',
-      servicePrice: 7,
-      serviceType: '',
-    ),
+        id: 2,
+        image: 'assets/installationSpot.png',
+        serviceName: 'Installation Spot',
+        serviceNote: '',
+        servicePrice: 7,
+        serviceType: '',
+        quantity: 1),
     Service(
-      id: 3,
-      image: 'assets/reglette.png',
-      serviceName: 'Installation Reglette',
-      serviceNote: '',
-      servicePrice: 7,
-      serviceType: '',
-    ),
+        id: 3,
+        image: 'assets/reglette.png',
+        serviceName: 'Installation Reglette',
+        serviceNote: '',
+        servicePrice: 7,
+        serviceType: '',
+        quantity: 1),
     Service(
-      id: 4,
-      image: 'assets/soudureKitclimatiseur.png',
-      serviceName: 'Soudure Cuivre',
-      serviceNote: '',
-      servicePrice: 7,
-      serviceType: '',
-    ),
+        id: 4,
+        image: 'assets/soudureKitclimatiseur.png',
+        serviceName: 'Soudure Cuivre',
+        serviceNote: '',
+        servicePrice: 7,
+        serviceType: '',
+        quantity: 1),
     Service(
-      id: 5,
-      image: 'assets/circuitsanitaire.png',
-      serviceName: 'Circuit Sanitaire',
-      serviceNote: '',
-      servicePrice: 7,
-      serviceType: '',
-    ),
+        id: 5,
+        image: 'assets/circuitsanitaire.png',
+        serviceName: 'Circuit Sanitaire',
+        serviceNote: '',
+        servicePrice: 7,
+        serviceType: '',
+        quantity: 1),
     Service(
-      id: 6,
-      image: 'assets/posecollecteur.png',
-      serviceName: 'Pose Collecteur',
-      serviceNote: '',
-      servicePrice: 7,
-      serviceType: '',
-    ),
+        id: 6,
+        image: 'assets/posecollecteur.png',
+        serviceName: 'Pose Collecteur',
+        serviceNote: '',
+        servicePrice: 7,
+        serviceType: '',
+        quantity: 1),
   ];
 
   /* List<Category> items2 = [
@@ -91,40 +90,40 @@ class _home_PageState extends State<home_Page> {
       ),
   ]; */
 
-   List<Service> items2 = [
+  List<Service> items2 = [
     Service(
-      id: 1,
-      image: 'assets/installationClimatiseur.png',
-      serviceName: 'Climatisation ',
-      serviceNote: '',
-      servicePrice: 7,
-      serviceType: '',
-    ),
+        id: 1,
+        image: 'assets/installationClimatiseur.png',
+        serviceName: 'Climatisation ',
+        serviceNote: '',
+        servicePrice: 7,
+        serviceType: '',
+        quantity: 1),
     Service(
-      id: 2,
-      image: 'assets/installationRobinet.png',
-      serviceName: 'Plomberie',
-      serviceNote: '',
-      servicePrice: 7,
-      serviceType: '',
-    ),
+        id: 2,
+        image: 'assets/installationRobinet.png',
+        serviceName: 'Plomberie',
+        serviceNote: '',
+        servicePrice: 7,
+        serviceType: '',
+        quantity: 1),
     Service(
-      id: 3,
-      image: 'assets/installationelectrique.png',
-      serviceName: 'Électricité',
-      serviceNote: '',
-      servicePrice: 7,
-      serviceType: '',
-    ),
+        id: 3,
+        image: 'assets/installationelectrique.png',
+        serviceName: 'Électricité',
+        serviceNote: '',
+        servicePrice: 7,
+        serviceType: '',
+        quantity: 1),
     Service(
-      id: 4,
-      image: 'assets/radiateuraluminum.png',
-      serviceName: 'Chauffage',
-      serviceNote: '',
-      servicePrice: 7,
-      serviceType: '',
-    ),
-  ]; 
+        id: 4,
+        image: 'assets/radiateuraluminum.png',
+        serviceName: 'Chauffage',
+        serviceNote: '',
+        servicePrice: 7,
+        serviceType: '',
+        quantity: 1),
+  ];
 
   List<Service> items3 = [
     Service(
@@ -134,14 +133,17 @@ class _home_PageState extends State<home_Page> {
       serviceNote: 'demander un technicien pour\nposer votre chauffe bain',
       servicePrice: 70,
       serviceType: 'installation',
+      quantity: 1
     ),
     Service(
       id: 2,
       image: 'assets/demontageClimatiseur.png',
       serviceName: 'Install Climatiseur',
-      serviceNote: 'demander un technicien\npour installer votre nouveau\nclimatiseur',
+      serviceNote:
+          'demander un technicien\npour installer votre nouveau\nclimatiseur',
       servicePrice: 100,
       serviceType: 'installation',
+      quantity: 1
     ),
     Service(
       id: 3,
@@ -150,6 +152,7 @@ class _home_PageState extends State<home_Page> {
       serviceNote: 'demander un électricien\npour réparer votre sonnette',
       servicePrice: 50,
       serviceType: 'dépannage',
+      quantity: 1
     ),
     Service(
       id: 4,
@@ -158,6 +161,7 @@ class _home_PageState extends State<home_Page> {
       serviceNote: 'demander un plombier pour\nréparer votre chauffe bain',
       servicePrice: 30,
       serviceType: 'dépannage',
+      quantity: 1
     ),
     Service(
       id: 5,
@@ -166,16 +170,19 @@ class _home_PageState extends State<home_Page> {
       serviceNote: 'demander un electricien\npour réparer votre lustre',
       servicePrice: 40,
       serviceType: 'dépannage',
+      quantity: 1
     ),
   ];
   @override
   Widget build(BuildContext context) => Scaffold(
         drawer: menu(),
         appBar: AppBar(
-          actions: [
-            Icon(Icons.search_outlined),
-            SizedBox(width: 20.0),
-          ],
+          title: Image.asset(
+            "assets/logo-darydar.png",
+            height: 150,
+            width: 150,
+          ),
+          centerTitle: true,
           backgroundColor: Color.fromARGB(255, 246, 246, 246),
         ),
         backgroundColor: Color.fromARGB(255, 246, 246, 246),
@@ -304,9 +311,7 @@ class _home_PageState extends State<home_Page> {
                       image: AssetImage(item.image),
                       fit: BoxFit.cover,
                       child: InkWell(
-                        onTap: () {
-                          
-                        },
+                        onTap: () {},
                       ),
                     ),
                   ),

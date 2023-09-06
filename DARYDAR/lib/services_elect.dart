@@ -20,6 +20,7 @@ class _services_electState extends State<services_elect> {
       serviceType: "dépannage",
       serviceNote:
           "entretenez votre climatiseur\npour assurer son bon\nfonctionnement",
+          quantity: 1
     ),
     Service(
       id: 2,
@@ -29,6 +30,7 @@ class _services_electState extends State<services_elect> {
       serviceType: "dépannage",
       serviceNote:
           "demander un technicien\npour souder votre tuyaux\nqui fuite",
+          quantity: 1
     ),
     Service(
       id: 3,
@@ -38,6 +40,7 @@ class _services_electState extends State<services_elect> {
       serviceType: "dépannage",
       serviceNote:
           "demander un technicien\npour installer votre nouveau\nclimatiseur",
+          quantity: 1
     ),
   ];
 

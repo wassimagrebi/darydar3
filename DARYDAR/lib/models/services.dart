@@ -5,13 +5,15 @@ class Service {
   final String serviceType;
   final double servicePrice;
   final String image;
+   num quantity;
 
-  Service({
+  Service( {
     required this.id,
     required this.serviceName,
     required this.serviceNote,
     required this.serviceType,
     required this.servicePrice,
     required this.image,
+    required this.quantity,
   });
 }
