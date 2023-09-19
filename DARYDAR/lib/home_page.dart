@@ -1,6 +1,13 @@
+
+
 import 'package:DARYDAR/plus_proche.dart';
 import 'package:DARYDAR/menu_page.dart';
 import 'package:DARYDAR/renovation_recente.dart';
+import 'package:DARYDAR/service_home.dart';
+import 'package:DARYDAR/services_chauff.dart';
+import 'package:DARYDAR/services_clima.dart';
+import 'package:DARYDAR/services_elect.dart';
+import 'package:DARYDAR/services_plomb.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:DARYDAR/models/services.dart';
@@ -127,51 +134,46 @@ class _home_PageState extends State<home_Page> {
 
   List<Service> items3 = [
     Service(
-      id: 1,
-      image: 'assets/poseChauffeBain.png',
-      serviceName: 'Pose ChauffeBain',
-      serviceNote: 'demander un technicien pour\nposer votre chauffe bain',
-      servicePrice: 70,
-      serviceType: 'installation',
-      quantity: 1
-    ),
+        id: 1,
+        image: 'assets/poseChauffeBain.png',
+        serviceName: 'Pose ChauffeBain',
+        serviceNote: 'demander un technicien pour\nposer votre chauffe bain',
+        servicePrice: 70,
+        serviceType: 'installation',
+        quantity: 1),
     Service(
-      id: 2,
-      image: 'assets/demontageClimatiseur.png',
-      serviceName: 'Install Climatiseur',
-      serviceNote:
-          'demander un technicien\npour installer votre nouveau\nclimatiseur',
-      servicePrice: 100,
-      serviceType: 'installation',
-      quantity: 1
-    ),
+        id: 2,
+        image: 'assets/demontageClimatiseur.png',
+        serviceName: 'Install Climatiseur',
+        serviceNote:
+            'demander un technicien\npour installer votre nouveau\nclimatiseur',
+        servicePrice: 100,
+        serviceType: 'installation',
+        quantity: 1),
     Service(
-      id: 3,
-      image: 'assets/reparationSonette.png',
-      serviceName: 'Reparation sonette',
-      serviceNote: 'demander un électricien\npour réparer votre sonnette',
-      servicePrice: 50,
-      serviceType: 'dépannage',
-      quantity: 1
-    ),
+        id: 3,
+        image: 'assets/reparationSonette.png',
+        serviceName: 'Reparation sonette',
+        serviceNote: 'demander un électricien\npour réparer votre sonnette',
+        servicePrice: 50,
+        serviceType: 'dépannage',
+        quantity: 1),
     Service(
-      id: 4,
-      image: 'assets/reparationchauffebain.png',
-      serviceName: 'Repar ChauffeBain',
-      serviceNote: 'demander un plombier pour\nréparer votre chauffe bain',
-      servicePrice: 30,
-      serviceType: 'dépannage',
-      quantity: 1
-    ),
+        id: 4,
+        image: 'assets/reparationchauffebain.png',
+        serviceName: 'Repar ChauffeBain',
+        serviceNote: 'demander un plombier pour\nréparer votre chauffe bain',
+        servicePrice: 30,
+        serviceType: 'dépannage',
+        quantity: 1),
     Service(
-      id: 5,
-      image: 'assets/interrepteur.png',
-      serviceName: 'Repar Interrepteur',
-      serviceNote: 'demander un electricien\npour réparer votre lustre',
-      servicePrice: 40,
-      serviceType: 'dépannage',
-      quantity: 1
-    ),
+        id: 5,
+        image: 'assets/interrepteur.png',
+        serviceName: 'Repar Interrepteur',
+        serviceNote: 'demander un electricien\npour réparer votre lustre',
+        servicePrice: 40,
+        serviceType: 'dépannage',
+        quantity: 1),
   ];
   @override
   Widget build(BuildContext context) => Scaffold(
@@ -221,8 +223,8 @@ class _home_PageState extends State<home_Page> {
                 scrollDirection: Axis.horizontal,
                 itemCount: 4,
                 separatorBuilder: (context, _) => SizedBox(width: 12),
-                itemBuilder: (context, index) =>
-                    buildCard2(item: items2[index]),
+                itemBuilder: (context, index) => buildCard2(
+                    item: items2[index]), //////////***,index:index* */
               ),
             ),
             Text(
@@ -294,10 +296,7 @@ class _home_PageState extends State<home_Page> {
         ),
       );
 
-  Widget buildCard2({
-    required Service item,
-  }) =>
-      Container(
+  Widget buildCard2({required Service item}) => Container(
         width: 150,
         child: Column(
           children: [
@@ -311,7 +310,25 @@ class _home_PageState extends State<home_Page> {
                       image: AssetImage(item.image),
                       fit: BoxFit.cover,
                       child: InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                if (item.id == 1)
+                                  return services_clima();
+                                else if (item.id == 2)
+                                  return services_plomb();
+                                else if (item.id == 3)
+                                  return services_elect();
+                                else if (item.id == 4)
+                                  return services_chauff();
+                                else
+                                  return home_Page();
+                              }, //service_home(item: item)
+                            ),
+                          );
+                        },
                       ),
                     ),
                   ),

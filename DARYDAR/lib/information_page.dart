@@ -264,7 +264,7 @@ class reusableWidget extends StatelessWidget {
                 ),
                 Text(
                   value.toString(),
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500,color: Color.fromARGB(255, 254, 74, 73)),
                 ),
               ],
             ),

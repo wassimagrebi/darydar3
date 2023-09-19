@@ -40,7 +40,7 @@ class _nav_barState extends State<nav_bar> {
             NavigationDestination(
               icon: Icon(Icons.home_outlined),
               selectedIcon: Icon(Icons.home),
-              label: 'Acceuil',
+              label: 'Accueil',
             ),
             NavigationDestination(
                 icon: Icon(Icons.grid_view_outlined),

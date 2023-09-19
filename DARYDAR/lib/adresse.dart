@@ -1,4 +1,4 @@
-import 'package:DARYDAR/condirmation.dart';
+import 'package:DARYDAR/confirmation.dart';
 import 'package:flutter/material.dart';
 import 'package:DARYDAR/models/cart.dart';
 import 'package:provider/provider.dart';
@@ -138,7 +138,7 @@ class reusableWidget extends StatelessWidget {
                 ),
                 Text(
                   value.toString(),
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500,color: Color.fromARGB(255, 254, 74, 73)),
                 ),
               ],
             ),
